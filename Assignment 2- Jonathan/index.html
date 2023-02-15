@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Halaman Utama</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- ini navbar -->
+    <div class="navbar">
+      <a class="link" href="/">Home</a>
+      <a class="link" href="">Product</a>
+      <a class="link" href="">Gallery</a>
+      <a class="link" href="">Contact</a>
+    </div>
+
+    <!-- ini kotak pengenal/info -->
+    <div id="box-profile">
+      <!-- ini bagian foto -->
+      <div class="bagian-foto"></div>
+      <!-- ini bagian info -->
+      <div class="info-profile">
+        <h1 id="namaProfile">Jonathan Sumolang</h1>
+        <h3 id="namaJabatan">Web Developer</h3>
+        <br />
+        <br />
+        <button class="button-atas">Confirm</button>
+        <button class="button-atas">Resume</button>
+      </div>
+      <!-- info lanjutan -->
+      <div class="info-lanjutan">
+        <p><b>Availability</b></p>
+        <p><b>Usia</b></p>
+        <p><b>Lokasi</b></p>
+        <p><b>Pengalaman</b></p>
+        <p><b>Email</b></p>
+      </div>
+      <!-- info lanjutan 2 -->
+      <div class="info-lanjutan-isi">
+        <p id="namaSedia">Full Time</p>
+        <p id="namaUmur">34</p>
+        <p id="namaLokasi">Jakarta, Indonesia</p>
+        <p id="lamaPengalaman">1 tahun</p>
+        <p id="namaEmail">jonathan.sumolang@gmail.com</p>
+      </div>
+    </div>
+
+    <div id="box-input">
+      <form>
+        <div class="form">
+          <label>Nama</label>
+          <input id="nama" type="text" name="nama" placeholder="Masukkan nama Anda" />
+        </div>
+        <div class="form">
+          <label>Role</label>
+          <input id="jabatan" type="text" name="role" />
+        </div>
+        <div class="form">
+          <label>Availability</label>
+          <input id="sedia" type="text" name="Availability" />
+        </div>
+        <div class="form">
+          <label>Usia</label>
+          <input id=umur type="text" name="usia" />
+        </div>
+        <div class="form">
+          <label>Lokasi</label>
+          <input id=location type="text" name="lokasi" />
+        </div>
+        <div class="form">
+          <label>Years Experience</label>
+          <input id=pengalaman type="text" name="pengalaman" />
+        </div>
+        <div class="form">
+          <label>Email</label>
+          <input id="email" type="email" name="email" />
+          <br>
+        </div>
+        <button style="height:30px;cursor: pointer;width: 100%;" name="submit" type="button" onclick="submitForm()">Submit</button>
+      </form>
+
+    </div>
+
+    <script>
+        var nama = document.getElementById("namaProfile").innerText;
+        document.getElementById("nama").value = nama;
+        
+        var jabatan = document.getElementById("namaJabatan").innerText;
+        document.getElementById("jabatan").value = jabatan;
+
+        var sedia = document.getElementById("namaSedia").innerText;
+        document.getElementById("sedia").value = sedia;
+
+        var usia = document.getElementById("namaUmur").innerText;
+        document.getElementById("umur").value = usia;
+
+        var lokasi = document.getElementById("namaLokasi").innerText;
+        document.getElementById("location").value = lokasi;
+
+        var pengalaman = document.getElementById("lamaPengalaman").innerText;
+        document.getElementById("pengalaman").value = pengalaman;
+
+        var email = document.getElementById("namaEmail").innerText;
+        document.getElementById("email").value = email;
+
+  
+
+        function submitForm(){
+          var inputNama = document.getElementById("nama").value;
+          document.getElementById("namaProfile").innerText = inputNama;
+          var inputJabatan = document.getElementById("jabatan").value;
+          document.getElementById("namaJabatan").innerText = inputJabatan;
+          var inputSedia = document.getElementById("sedia").value;
+          document.getElementById("namaSedia").innerText = inputSedia;
+          var inputUsia = document.getElementById("umur").value;
+          document.getElementById("namaUmur").innerText = inputUsia;
+          var inputLokasi = document.getElementById("location").value;
+          document.getElementById("namaLokasi").innerText = inputLokasi;
+          var inputPengalaman = document.getElementById("pengalaman").value;
+          document.getElementById("lamaPengalaman").innerText = inputPengalaman;
+          var inputEmail = document.getElementById("email").value;
+          document.getElementById("namaEmail").innerText = inputEmail;
+
+        }
+        </script>
+
+
+
+  </body>
+</html>
